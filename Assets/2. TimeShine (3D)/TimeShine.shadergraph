@@ -80,7 +80,14 @@
         }
     ],
     "m_GroupDatas": [],
-    "m_StickyNoteDatas": [],
+    "m_StickyNoteDatas": [
+        {
+            "m_Id": "4ffbc394ddb743858e4ff7b336ed8626"
+        },
+        {
+            "m_Id": "c4f5f8578ddb419cb744ddf4566e0f81"
+        }
+    ],
     "m_Edges": [
         {
             "m_OutputSlot": {
@@ -746,7 +753,7 @@
 }
 
 {
-    "m_SGVersion": 1,
+    "m_SGVersion": 2,
     "m_Type": "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
     "m_ObjectId": "3a90f0f52c814f98ad91595609afd185",
     "m_WorkflowMode": 1,
@@ -994,6 +1001,26 @@
     "m_PreviewMode": 0,
     "m_CustomColors": {
         "m_SerializableColors": []
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "4ffbc394ddb743858e4ff7b336ed8626",
+    "m_Title": "포지션 좌우 이동",
+    "m_Content": "1. 포지션 노드에서 스페이스를 오브젝트로 바꾸어 해당 오브젝트의 오브젝트 기준 위치 좌표 가져오기\n\n2. Time 노드 중 Sine Time을 위치 좌표의 X축에 더해서 -1 ~ 1 사이를 왔다갔다 하도록 설정\n\n3. 결과값을 버텍스 쉐이더 중 포지션에 입력",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": -1019.0,
+        "y": -259.0,
+        "width": 736.0,
+        "height": 115.65216064453125
+    },
+    "m_Group": {
+        "m_Id": ""
     }
 }
 
@@ -1652,6 +1679,26 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
+    "m_ObjectId": "c4f5f8578ddb419cb744ddf4566e0f81",
+    "m_Title": "포지션 좌우 이동",
+    "m_Content": "1. Time 노드 중 Sine Time을 앱솔루트에 넣어서 절대값 계산 -1 ~ 1 > 0 ~ 1\n-> 가운데에 있을 때는 0, 좌우로 이동했을 때는 빛이 나도록\n\n2. 글로우 될 정도를 설정하는 글로우 값을 곱하고, 글로우 컬러도 곱해서 이미션에 적용",
+    "m_TextSize": 0,
+    "m_Theme": 0,
+    "m_Position": {
+        "serializedVersion": "2",
+        "x": -1000.0,
+        "y": 712.0,
+        "width": 736.0,
+        "height": 101.2174072265625
+    },
+    "m_Group": {
+        "m_Id": ""
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.TimeNode",
     "m_ObjectId": "c5a33c1867b747a4b47a0f018f300358",
     "m_Group": {
@@ -1829,6 +1876,7 @@
     "m_SGVersion": 1,
     "m_Type": "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
     "m_ObjectId": "d90ded05fd5c44d7b550334e8d3b8c62",
+    "m_Datas": [],
     "m_ActiveSubTarget": {
         "m_Id": "3a90f0f52c814f98ad91595609afd185"
     },
@@ -1841,6 +1889,7 @@
     "m_AlphaClip": false,
     "m_CastShadows": true,
     "m_ReceiveShadows": true,
+    "m_SupportsLODCrossFade": false,
     "m_CustomEditorGUI": "",
     "m_SupportVFX": false
 }
