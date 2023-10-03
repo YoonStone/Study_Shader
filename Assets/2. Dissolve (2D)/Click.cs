@@ -19,7 +19,7 @@ public class Click : MonoBehaviour
         StartCoroutine(StartDissolve());
     }
 
-    // 아이템 스폰 시 디졸브 기능
+    // 제목 클릭 시 서서히 차오르는 디졸브 기능
     IEnumerator StartDissolve()
     {
         float value = -1;
