@@ -6,8 +6,6 @@ public class Click : MonoBehaviour
 {
     Renderer rd;
 
-    public float dissolveTime = 1;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +17,7 @@ public class Click : MonoBehaviour
         StartCoroutine(StartDissolve());
     }
 
-    // 제목 클릭 시 서서히 차오르는 디졸브 기능
+    // 제목 클릭 시 서서히 사라지는 디졸브 기능 후 비활성화
     IEnumerator StartDissolve()
     {
         float value = -1;
@@ -27,8 +25,10 @@ public class Click : MonoBehaviour
         {
             print(value);
             value += Time.deltaTime;
-            rd.material.SetFloat("_Dissolve", value);
+            rd.material.SetFloat("_Dissolve", -value);
             yield return null;
         }
+
+        gameObject.SetActive(false);
     }
 }
